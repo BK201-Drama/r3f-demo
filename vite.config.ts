@@ -1,6 +1,8 @@
-import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import * as path from 'path'
+import { resolve } from 'path'
 import autoImport from 'unplugin-auto-import/vite'
+import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -17,4 +19,64 @@ export default defineConfig({
       },
     }),
   ],
+  resolve: {
+    alias: [
+      {
+        find: '@',
+        replacement: resolve(__dirname, './src'),
+      },
+      {
+        find: '@core',
+        replacement: resolve(__dirname, './src/core'),
+      },
+      {
+        find: '@domain',
+        replacement: resolve(__dirname, './src/domain'),
+      },
+      {
+        find: '@features',
+        replacement: resolve(__dirname, './src/features'),
+      },
+      {
+        find: '@styles',
+        replacement: resolve(__dirname, './src/styles'),
+      },
+      {
+        find: '@public',
+        replacement: resolve(__dirname, './src/public'),
+      },
+      {
+        find: '@assets',
+        replacement: resolve(__dirname, './src/assets'),
+      },
+      {
+        find: '@pages',
+        replacement: resolve(__dirname, './src/pages'),
+      },
+      {
+        find: '@store',
+        replacement: resolve(__dirname, './src/core/store'),
+      },
+      {
+        find: '@services',
+        replacement: resolve(__dirname, './src/services'),
+      },
+      {
+        find: '@types',
+        replacement: resolve(__dirname, './src/types'),
+      },
+      {
+        find: '@utils',
+        replacement: resolve(__dirname, './src/shared/utils'),
+      },
+      {
+        find: /^~/,
+        replacement: '',
+      },
+      {
+        find: '@',
+        replacement: path.resolve(__dirname, './src'),
+      },
+    ],
+  },
 })
