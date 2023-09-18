@@ -13,9 +13,13 @@ export default defineConfig({
       imports: [
         'react',
         'mobx',
+        'mobx-react-lite',
         'ahooks',
         {
           lodash: [['default', '_']],
+        },
+        {
+          react: ['Suspense', 'lazy', 'createContext'],
         },
         {
           '@/core/box/store/index.store': ['boxStore'],

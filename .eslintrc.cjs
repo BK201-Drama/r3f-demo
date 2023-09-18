@@ -11,7 +11,7 @@ module.exports = {
     'google',
     'plugin:prettier/recommended',
     './configs/autoImport/.eslintrc-auto-import.json',
-    'prettier'
+    'prettier',
   ],
   overrides: [],
   parser: '@typescript-eslint/parser',

@@ -116,6 +116,11 @@
     "when": true,
     "_": true,
     "boxStore": true,
-    "lineStore": true
+    "lineStore": true,
+    "Observer": true,
+    "observer": true,
+    "useLocalObservable": true,
+    "Suspense": true,
+    "createContext": true
   }
 }

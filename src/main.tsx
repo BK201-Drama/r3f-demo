@@ -1,10 +1,24 @@
-import React from 'react'
+import {
+  StyleProvider,
+  legacyLogicalPropertiesTransformer,
+} from '@ant-design/cssinjs'
+import { ConfigProvider } from 'antd'
+import 'antd/dist/reset.css'
+import zhCN from 'antd/locale/zh_CN'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
+import { storesContext as StoresContext, stores } from '@core/index.store'
+import './styles/tailwind.less'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ConfigProvider locale={zhCN}>
+    <StoresContext.Provider value={stores}>
+      <StyleProvider transformers={[legacyLogicalPropertiesTransformer]}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </StyleProvider>
+    </StoresContext.Provider>
+  </ConfigProvider>
 )
