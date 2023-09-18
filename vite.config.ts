@@ -10,7 +10,20 @@ export default defineConfig({
   plugins: [
     react(),
     autoImport({
-      imports: ['react', 'mobx', 'ahooks'],
+      imports: [
+        'react',
+        'mobx',
+        'ahooks',
+        {
+          lodash: [['default', '_']],
+        },
+        {
+          '@/core/box/store/index.store': ['boxStore'],
+        },
+        {
+          '@/core/line/store/index.store': ['lineStore'],
+        },
+      ],
       dts: 'configs/autoImport/auto-imports.d.ts', // 生成自动导入文件声明
       eslintrc: {
         enabled: true, // Default `false`

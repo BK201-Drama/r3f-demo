@@ -113,6 +113,9 @@
     "useVirtualList": true,
     "useWebSocket": true,
     "useWhyDidYouUpdate": true,
-    "when": true
+    "when": true,
+    "_": true,
+    "boxStore": true,
+    "lineStore": true
   }
 }
