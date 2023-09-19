@@ -121,6 +121,8 @@
     "observer": true,
     "useLocalObservable": true,
     "Suspense": true,
-    "createContext": true
+    "createContext": true,
+    "FC": true,
+    "FunctionComponentElement": true
   }
 }

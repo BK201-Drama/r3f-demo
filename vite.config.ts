@@ -19,7 +19,13 @@ export default defineConfig({
           lodash: [['default', '_']],
         },
         {
-          react: ['Suspense', 'lazy', 'createContext'],
+          react: [
+            'Suspense',
+            'lazy',
+            'createContext',
+            'FC',
+            'FunctionComponentElement',
+          ],
         },
         {
           '@/core/box/store/index.store': ['boxStore'],
